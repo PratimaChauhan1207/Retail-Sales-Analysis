@@ -124,7 +124,9 @@ Retail-Sales-Analysis/
 ### 🔗 **GitHub Link**
 
 ### 🔗 **GitHub Link**  
-[https://github.com/pratimachauhan/Retail-Sales-Analysis](https://github.com/pratimachauhan/Retail-Sales-Analysis)
+### 🔗 **GitHub Link**  
+[https://github.com/PratimaChauhan1207/Retail-Sales-Analysis](https://github.com/PratimaChauhan1207/Retail-Sales-Analysis)
+
 
 
 ---
