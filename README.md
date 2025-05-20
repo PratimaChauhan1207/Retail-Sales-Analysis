@@ -1,134 +1,72 @@
-### 📌 **Project Objective**
+# 🛒 Retail Sales Analysis
 
-This project analyzes **12 months of retail sales data** using Python and Pandas to identify:
-
-* Monthly revenue trends
-* Peak order days
-* City-wise performance
-* Most sold products
-* Product combinations bought together
+This project analyzes 12 months of retail sales data to uncover business insights such as monthly revenue trends, popular products, city-wise performance, and frequently bought product combinations.
 
 ---
 
-### 📂 **Data Source**
+## 📁 Project Structure
 
-* Folder: `SalesData/`
-* Files: 12 CSVs (one for each month)
-* Final merged file: `Sales.csv`
-
----
-
-### 🧹 **1. Data Cleaning and Preparation**
-
-* Merged 12 monthly files using `os` and `pandas.concat()`
-* Dropped rows with missing values
-* Removed header rows mistakenly included in data
-* Converted data types:
-
-  * `Quantity Ordered` → integer
-  * `Price Each` → float
-  * `Order Date` → datetime format
-* Added new columns:
-
-  * `amount` = Quantity × Price
-  * `City` = extracted from `Purchase Address`
-  * `month`, `month name`, `day name`
-
----
-
-### 📈 **2. Monthly Sales Analysis**
-
-* Grouped data by month
-* Calculated:
-
-  * Total revenue per month
-  * Average sales per month
-* Saved analysis to `Analysis/MontlySales.csv`
-* Visualized using `matplotlib` → `MonthlySales.png`
-
----
-
-### 📊 **3. Orders by Day of the Week**
-
-* Counted number of orders on each weekday
-* Saved to `Ordersbyday.csv`
-* Visualized as bar chart → `Ordersbyday.png`
-* Also tagged weekends using `IsHoliday` column
-
----
-
-### 🏙️ **4. City-Wise Analysis**
-
-* Grouped by city to find:
-
-  * Total orders
-  * Quantity sold
-  * Total revenue
-* Saved to `City.csv`
-* Visualized → `City.png` (Grouped bar chart for each city)
-
----
-
-### 🤝 **5. Frequently Bought Together (Product Bundles)**
-
-* Found duplicate `Order ID`s (multiple products in same order)
-* Combined product names in each group
-* Saved to `duplicate.csv`
-* Used `itertools.combinations()` + `Counter` to find:
-
-  * Most common product pairs bought together
-
----
-
-### 📦 **Libraries Used**
-
-* `pandas`
-* `numpy`
-* `matplotlib`
-* `itertools`
-* `os`
-* `collections.Counter`
-
----
-
-### 📁 **Folder Structure**
-
-```
 Retail-Sales-Analysis/
-│
-├── SalesData/              → Raw 12-month CSVs
-├── Analysis/               → Processed data + Charts
-│   ├── MontlySales.csv
-│   ├── Ordersbyday.csv
-│   ├── City.csv
-│   ├── duplicate.csv
-│   ├── MonthlySales.png
-│   ├── Ordersbyday.png
-│   └── City.png
-├── Sales.csv               → Merged full data
-├── Retail_Sales_Analysis.py → Python project code
-└── README.md               → Project summary
-```
+├── SalesData/ # Contains 12 months raw CSV files
+├── Analysis/ # Output visualizations and CSVs
+├── Sales.csv # Combined cleaned dataset
+├── main.py # All code for data cleaning & analysis
+├── requirements.txt # Required Python libraries
+└── README.md # Project documentation
 
 ---
 
-### ✅ **Key Insights**
+## 🧠 Key Insights
 
-* Highest sales were recorded in **December**
-* Most orders are placed on **Monday**
-* **San Francisco** generated the most revenue
-* **Phones & Chargers** are often bought together
+- 📆 **Monthly Revenue**: Visual trend of total monthly sales.
+- 📅 **Orders by Day**: Find which day has the most orders.
+- 🏙️ **Top Performing City**: Most orders, quantity, and revenue.
+- 💼 **Holiday Impact**: Sales comparison on weekends vs weekdays.
+- 🛍️ **Product Pairs**: Products frequently bought together.
+
+---
+
+## 📊 Visual Output Samples
+
+### 1. Monthly Sales Trend  
+![Monthly Sales](Analysis/MonthlySales.png)
+
+### 2. Orders by Day  
+![Orders by Day](Analysis/Ordersbyday.png)
+
+### 3. City-wise Order Analysis  
+![City Analysis](Analysis/City.png)
 
 ---
 
-### 🔗 **GitHub Link**
+## ▶️ How to Run This Project
 
-### 🔗 **GitHub Link**  
-### 🔗 **GitHub Link**  
-[https://github.com/PratimaChauhan1207/Retail-Sales-Analysis](https://github.com/PratimaChauhan1207/Retail-Sales-Analysis)
-
-
-
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PratimaChauhan1207/Retail-Sales-Analysis.git
+   cd Retail-Sales-Analysis
+2.	Install dependencies:
+3.	pip install -r requirements.txt
+4.	Run the script:
+5.	python main.py
+________________________________________
+🛠 Libraries Used
+•	pandas
+•	matplotlib
+•	numpy
+•	os
+•	datetime
+•	collections
+________________________________________
+📦 Dataset
+12 individual CSV files for each month placed inside the /SalesData folder. These files are merged into a single Sales.csv for processing.
+________________________________________
+🔗 GitHub Link
+https://github.com/PratimaChauhan1207/Retail-Sales-Analysis
+________________________________________
+🙋‍♀️ About Me
+Pratima Chauhan
+Aspiring Data Analyst | Learning Python, Pandas, Power BI | Focused on turning data into stories.
+📫 Reach me on LinkedIn
 
 
